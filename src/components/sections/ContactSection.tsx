@@ -150,29 +150,36 @@ function ContactSection() {
           <div className="flex-1 p-0 lg:p-2 self-start">
             <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-3 xl:gap-y-4.5">
               <div className="flex flex-col gap-1.5">
-                <label className={labelClasses}>Imię i nazwisko <span className="text-red-500">*</span></label>
-                <input type="text" placeholder="np. Jan Kowalski" required className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px]`} />
+                <label htmlFor="contact-full-name" className={labelClasses}>Imię i nazwisko <span className="text-red-500">*</span></label>
+                <input id="contact-full-name" type="text" placeholder="np. Jan Kowalski" required className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px]`} />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className={labelClasses}>Adres e-mail <span className="text-red-500">*</span></label>
-                <input type="email" placeholder="twoj@email.pl" required className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px]`} />
+                <label htmlFor="contact-email" className={labelClasses}>Adres e-mail <span className="text-red-500">*</span></label>
+                <input id="contact-email" type="email" placeholder="twoj@email.pl" required className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px]`} />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className={labelClasses}>Firma</label>
-                <input type="text" placeholder="Nazwa Twojej firmy" className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px]`} />
+                <label htmlFor="contact-company" className={labelClasses}>Firma</label>
+                <input id="contact-company" type="text" placeholder="Nazwa Twojej firmy" className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px]`} />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className={labelClasses}>Numer telefonu</label>
-                <input type="tel" placeholder="+48 000 000 000" className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px]`} />
+                <label htmlFor="contact-phone" className={labelClasses}>Numer telefonu</label>
+                <input id="contact-phone" type="tel" placeholder="+48 000 000 000" className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px]`} />
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className={labelClasses}>Typ projektu</label>
+                <label id="contact-project-type-label" htmlFor="contact-project-type" className={labelClasses}>Typ projektu</label>
                 <div className="relative">
-                  <select className={`${inputBaseClasses} text-[12px] xl:text-[16px] appearance-none pr-12 cursor-pointer`}>
+                  <select
+                    id="contact-project-type"
+                    name="projectType"
+                    aria-label="Typ projektu"
+                    aria-labelledby="contact-project-type-label"
+                    title="Typ projektu"
+                    className={`${inputBaseClasses} text-[12px] xl:text-[16px] appearance-none pr-12 cursor-pointer`}
+                  >
                     <option value="">Wybierz typ projektu</option>
                     <option value="web">Aplikacja webowa</option>
                     <option value="erp">System ERP/CRM</option>
@@ -185,9 +192,16 @@ function ContactSection() {
               </div>
 
               <div className="flex flex-col gap-1.5">
-                <label className={labelClasses}>Szacowany budżet</label>
+                <label id="contact-budget-label" htmlFor="contact-budget" className={labelClasses}>Szacowany budżet</label>
                 <div className="relative">
-                  <select className={`${inputBaseClasses} text-[12px] xl:text-[16px] appearance-none pr-12 cursor-pointer`}>
+                  <select
+                    id="contact-budget"
+                    name="budgetRange"
+                    aria-label="Szacowany budżet"
+                    aria-labelledby="contact-budget-label"
+                    title="Szacowany budżet"
+                    className={`${inputBaseClasses} text-[12px] xl:text-[16px] appearance-none pr-12 cursor-pointer`}
+                  >
                     <option value="">Wybierz przedział</option>
                     <option value="small">Poniżej 10 tys. PLN</option>
                     <option value="med">10 - 25 tys. PLN</option>
@@ -200,13 +214,13 @@ function ContactSection() {
               </div>
 
               <div className="flex flex-col gap-1.5 md:col-span-2">
-                <label className={labelClasses}>Opis projektu / pytanie <span className="text-red-500">*</span></label>
-                <textarea rows={4} required placeholder="Opisz krótko swój pomysł lub zadaj nam pytanie..." className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px] resize-none`} />
+                <label htmlFor="contact-message" className={labelClasses}>Opis projektu / pytanie <span className="text-red-500">*</span></label>
+                <textarea id="contact-message" rows={4} required placeholder="Opisz krótko swój pomysł lub zadaj nam pytanie..." className={`${inputBaseClasses} text-[14px] xl:text-[20px] placeholder:text-[12px] xl:placeholder:text-[19px] resize-none`} />
               </div>
 
               <div className="md:col-span-2 flex items-start gap-3">
-                <input type="checkbox" required className="mt-1 w-4 h-4 rounded border-[#F3F4F6] text-[#00A63E] border accent-[#00A63E] cursor-pointer" />
-                <label className="text-[12px] xl:text-[16px] font-bold text-[#6A7282] leading-tight cursor-default">
+                <input id="contact-consent" type="checkbox" required className="mt-1 w-4 h-4 rounded border-[#F3F4F6] text-[#00A63E] border accent-[#00A63E] cursor-pointer" />
+                <label htmlFor="contact-consent" className="text-[12px] xl:text-[16px] font-bold text-[#6A7282] leading-tight cursor-default">
                   Wyrażam zgodę na przetwarzanie moich danych osobowych przez GreenByte Solutions sp. z o.o. w celu odpowiedzi na zapytanie. Dane nie będą udostępniane osobom trzecim.&nbsp;
                   <a href="#" className="text-[#2FA63D] underline font-bold cursor-pointer">Polityka prywatności</a>
                 </label>

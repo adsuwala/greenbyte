@@ -129,41 +129,33 @@ function Navbar() {
 
       <div
         id="mobile-menu"
-        aria-hidden={!isOpen}
-        className={`grid overflow-hidden transition-all duration-300 ease-out lg:hidden ${
-          isOpen
-            ? 'grid-rows-[1fr] opacity-100'
-            : 'pointer-events-none grid-rows-[0fr] opacity-0'
-        }`}
+        hidden={!isOpen}
+        className="lg:hidden"
       >
-        <div className="min-h-0">
-          <nav
-            aria-label="Nawigacja mobilna"
-            className={`mx-auto max-w-6xl px-4 py-5 transition-all duration-300 ease-out max-[22.75rem]:px-3 sm:px-6 lg:px-8 ${
-              isOpen ? 'translate-y-0' : '-translate-y-2'
-            }`}
-          >
-            <div className="flex flex-col gap-6 px-1.5">
-              {navItems.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  className="rounded-2xl text-base leading-none font-medium text-slate-700 transition hover:bg-slate-100 hover:text-slate-950 max-[22.75rem]:text-sm"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {item.label}
-                </a>
-              ))}
+        <nav
+          aria-label="Nawigacja mobilna"
+          className="mx-auto max-w-6xl px-4 py-5 max-[22.75rem]:px-3 sm:px-6 lg:px-8"
+        >
+          <div className="flex flex-col gap-6 px-1.5">
+            {navItems.map((item) => (
               <a
-                href="#contact"
-                className="mt-2 inline-flex items-center justify-center whitespace-nowrap rounded-cta bg-[#3BC950] py-3 text-sm font-bold text-white transition hover:bg-brand-hover"
+                key={item.href}
+                href={item.href}
+                className="rounded-2xl text-base leading-none font-medium text-slate-700 transition hover:bg-slate-100 hover:text-slate-950 max-[22.75rem]:text-sm"
                 onClick={() => setIsOpen(false)}
               >
-                Bezpłatna konsultacja
+                {item.label}
               </a>
-            </div>
-          </nav>
-        </div>
+            ))}
+            <a
+              href="#contact"
+              className="mt-2 inline-flex items-center justify-center whitespace-nowrap rounded-cta bg-[#3BC950] py-3 text-sm font-bold text-white transition hover:bg-brand-hover"
+              onClick={() => setIsOpen(false)}
+            >
+              Bezpłatna konsultacja
+            </a>
+          </div>
+        </nav>
       </div>
     </header>
   )
