@@ -222,7 +222,7 @@ function ContactSection() {
                 <input id="contact-consent" type="checkbox" required className="mt-1 w-4 h-4 rounded border-[#F3F4F6] text-[#00A63E] border accent-[#00A63E] cursor-pointer" />
                 <label htmlFor="contact-consent" className="text-[12px] xl:text-[16px] font-bold text-[#6A7282] leading-tight cursor-default">
                   Wyrażam zgodę na przetwarzanie moich danych osobowych przez GreenByte Solutions sp. z o.o. w celu odpowiedzi na zapytanie. Dane nie będą udostępniane osobom trzecim.&nbsp;
-                  <a href="#" className="text-[#2FA63D] underline font-bold cursor-pointer">Polityka prywatności</a>
+                  <a href="#" className="text-[#2B7D3A] underline font-bold cursor-pointer">Polityka prywatności</a>
                 </label>
               </div>
 

@@ -144,7 +144,7 @@ function PortfolioSection() {
                   {project.tech.map((t, idx) => (
                     <span 
                       key={idx}
-                      className="bg-[#F3F4F6] text-[#6A7282] text-[12px] xl:text-[16px] font-medium py-1.5 px-3 xl:px-4 rounded-cta"
+                      className="bg-[#F3F4F6] text-[#5F6878] text-[12px] xl:text-[16px] font-medium py-1.5 px-3 xl:px-4 rounded-cta"
                     >
                       {t}
                     </span>
