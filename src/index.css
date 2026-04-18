@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", sans-serif;
-  --font-syne: "Syne", sans-serif;
+  --font-sans: "Inter", "Segoe UI", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-syne: "Avenir Next", "Segoe UI", "Trebuchet MS", "Helvetica Neue", Arial, sans-serif;
   --color-app: #f9fafc;
   --color-brand-hover: #34b547;
   --radius-cta: 0.625rem;

@@ -19,6 +19,15 @@ export default defineConfig({
   build: {
     target: 'es2022',
   },
+  resolve: {
+    alias: {
+      react: 'preact/compat',
+      'react-dom': 'preact/compat',
+      'react-dom/test-utils': 'preact/test-utils',
+      'react/jsx-runtime': 'preact/jsx-runtime',
+      'react/jsx-dev-runtime': 'preact/jsx-dev-runtime',
+    },
+  },
   plugins: [
     react(),
     tailwindcss(),
