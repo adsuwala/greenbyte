@@ -216,7 +216,7 @@ function ContactSection() {
                 <button 
                   type="submit" 
                   disabled={status !== 'idle'}
-                  className="w-full h-13 xl:h-14.5 bg-[#2FA63D] hover:bg-[#288e34] text-white font-bold rounded-cta transition-all shadow-lg shadow-[#2FA63D]/20 flex items-center justify-center gap-3 overflow-hidden"
+                  className="w-full h-13 xl:h-14.5 bg-[#2B7D3A] hover:bg-[#236A30] text-white font-bold rounded-cta transition-all shadow-lg shadow-[#2B7D3A]/20 flex items-center justify-center gap-3 overflow-hidden"
                 >
                   {status === 'idle' && (
                     <>
