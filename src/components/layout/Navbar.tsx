@@ -13,15 +13,27 @@ function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 8)
+    let frameId = 0
+
+    const updateScrollState = () => {
+      frameId = 0
+      const nextIsScrolled = window.scrollY > 8
+      setIsScrolled((prev) => (prev === nextIsScrolled ? prev : nextIsScrolled))
     }
 
-    handleScroll()
+    const handleScroll = () => {
+      if (frameId !== 0) return
+      frameId = window.requestAnimationFrame(updateScrollState)
+    }
+
+    updateScrollState()
     window.addEventListener('scroll', handleScroll, { passive: true })
 
     return () => {
       window.removeEventListener('scroll', handleScroll)
+      if (frameId !== 0) {
+        window.cancelAnimationFrame(frameId)
+      }
     }
   }, [])
 
