@@ -79,7 +79,7 @@ function PortfolioSection() {
                   px-3.5 xl:px-5 py-1.25 xl:py-[14.5px] rounded-[30px] transition-all duration-300
                   text-[14px] lg:text-[20px] cursor-pointer
                   ${isActive 
-                    ? "bg-[#00A63E] text-white font-bold shadow-lg shadow-[#00A63E]/20" 
+                    ? "bg-[#2B7D3A] text-white font-bold shadow-lg shadow-[#2B7D3A]/20" 
                     : "bg-[#F3F4F6] text-[#535D6D] font-semibold hover:bg-[#E5E7EB]"
                   }
                 `}
@@ -97,7 +97,7 @@ function PortfolioSection() {
               className="group flex flex-col bg-white border-2 border-[#F6F3F4] rounded-[20px] overflow-hidden transition-all duration-300 hover:shadow-2xl hover:border-[#3BB056]/20 animate-fade-in"
             >
               <div className="aspect-video overflow-hidden relative">
-                <div className="absolute top-3.75 xl:top-5 left-3.75 xl:left-5 z-20 flex items-center gap-2 bg-[#2FA63D] py-1.5 px-3 rounded-[25px] border border-white/10">
+                <div className="absolute top-3.75 xl:top-5 left-3.75 xl:left-5 z-20 flex items-center gap-2 bg-[#257A35] py-1.5 px-3 rounded-[25px] border border-white/10">
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="xl:w-4 xl:h-4">
                     <g clipPath={`url(#clip0_cat_${index})`}>
                       <path d="M7.34182 1.50858C7.12308 1.28977 6.82638 1.16681 6.51699 1.16675H2.33332C2.0239 1.16675 1.72716 1.28966 1.50837 1.50846C1.28957 1.72725 1.16666 2.024 1.16666 2.33341V6.51708C1.16672 6.82648 1.28968 7.12317 1.50849 7.34191L6.58582 12.4192C6.85096 12.6827 7.20955 12.8306 7.58332 12.8306C7.9571 12.8306 8.31569 12.6827 8.58082 12.4192L12.4192 8.58091C12.6826 8.31578 12.8305 7.95719 12.8305 7.58341C12.8305 7.20964 12.6826 6.85105 12.4192 6.58591L7.34182 1.50858Z" stroke="white" strokeWidth="0.833333" strokeLinecap="round" strokeLinejoin="round"/>
@@ -122,7 +122,7 @@ function PortfolioSection() {
               </div>
 
               <div className="p-5 xl:p-6 flex flex-col flex-1">
-                <span className="text-[#00A63E] text-[12px] xl:text-[20px] font-medium uppercase tracking-wider mb-0">
+                <span className="text-[#2F7A3A] text-[12px] xl:text-[20px] font-medium uppercase tracking-wider mb-0">
                   {project.company}
                 </span>
                 
@@ -162,7 +162,7 @@ function PortfolioSection() {
           
           <a
             href="#contact"
-            className="inline-flex items-center gap-2.5 px-6 xl:px-8 py-3.5 xl:py-4.5 border border-[#36AD4F] rounded-[13px] bg-transparent text-[#36AD4F] text-[14px] xl:text-[20px] font-bold transition-all duration-300 hover:bg-[#36AD4F] hover:text-white group"
+            className="inline-flex items-center gap-2.5 px-6 xl:px-8 py-3.5 xl:py-4.5 border border-[#2F7A3A] rounded-[13px] bg-transparent text-[#2F7A3A] text-[14px] xl:text-[20px] font-bold transition-all duration-300 hover:bg-[#2F7A3A] hover:text-white group"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="group-hover:stroke-white transition-colors duration-300">
               <path d="M10 2H14V6" stroke="currentColor" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>

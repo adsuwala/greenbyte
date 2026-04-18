@@ -71,7 +71,7 @@ function HeroSection() {
               <div className="mt-7.5 flex flex-col gap-2.5 md:flex-row 3xl:gap-10">
                 <a
                   href="#contact"
-                  className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-cta bg-[#3BC950] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-brand-hover md:w-auto md:text-xl 3xl:px-6 3xl:py-6 3xl:text-2xl"
+                  className="inline-flex w-full items-center justify-center gap-2 whitespace-nowrap rounded-cta bg-[#2B7D3A] px-5 py-2.5 text-sm font-bold text-white transition hover:bg-[#236A30] md:w-auto md:text-xl 3xl:px-6 3xl:py-6 3xl:text-2xl"
                 >
                   Bezpłatna konsultacja
                   <svg
@@ -139,7 +139,7 @@ function HeroSection() {
                   </div>
                 </div>
                 <div className="absolute inset-x-9 bottom-2 flex items-center gap-3 rounded-2xl border border-[#567278] bg-[rgba(16,34,21,0.64)] px-4 py-2 backdrop-blur-md 3xl:bottom-7.25 3xl:min-h-24 3xl:gap-4 3xl:rounded-4xl 3xl:px-5 3xl:py-[0.84375rem]">
-                  <div className="inline-flex h-13 w-13 shrink-0 items-center justify-center rounded-cta bg-[#3BC950]">
+                  <div className="inline-flex h-13 w-13 shrink-0 items-center justify-center rounded-cta bg-[#2B7D3A]">
                     <svg
                       width="30"
                       height="30"

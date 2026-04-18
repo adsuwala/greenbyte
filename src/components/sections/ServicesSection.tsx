@@ -93,7 +93,7 @@ function ServicesSection() {
           ].map((service, index) => (
             <div
               key={index}
-              className="group p-8 rounded-3xl bg-white border border-transparent hover:border-[#3BB056]/20 hover:shadow-xl transition-all duration-300 flex flex-col h-full"
+              className="group p-8 rounded-3xl bg-white border border-transparent hover:border-[#2F7A3A]/20 hover:shadow-xl transition-all duration-300 flex flex-col h-full"
             >
               <div 
                 className="w-10 h-10 sm:w-13 sm:h-13 xl:w-16 xl:h-16 rounded-2xl flex items-center justify-center mb-3.75 transition-all duration-300 group-hover:scale-110 shrink-0"
@@ -111,13 +111,13 @@ function ServicesSection() {
                 {service.title}
               </h3>
               
-              <p className="text-[#7B8291] text-[14px] md:text-[16px] xl:text-[20px] leading-relaxed mb-5 xl:mb-7.5">
+              <p className="text-[#5F6878] text-[14px] md:text-[16px] xl:text-[20px] leading-relaxed mb-5 xl:mb-7.5">
                 {service.description}
               </p>
 
               <ul className="mt-auto space-y-2">
                 {service.tags.map((tag, tagIndex) => (
-                  <li key={tagIndex} className="flex items-center text-[12px] xl:text-[16px] font-medium text-[#7B8291]">
+                  <li key={tagIndex} className="flex items-center text-[12px] xl:text-[16px] font-medium text-[#5F6878]">
                     <span 
                       className="w-1.5 h-1.5 rounded-full mr-2 shrink-0" 
                       style={{ backgroundColor: service.color }}

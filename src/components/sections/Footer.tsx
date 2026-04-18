@@ -89,13 +89,13 @@ function Footer() {
         </div>
 
         <div className="pt-6 border-t border-[#0C3F20] flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[#4E7A62] font-medium text-[12px] xl:text-[16px]">
+          <p className="text-[#76AC8B] font-medium text-[12px] xl:text-[16px]">
             © {currentYear} GreenByte Solutions sp. z o.o. Wszelkie prawa zastrzeżone.
           </p>
           <div className="flex gap-8">
-            <a href="#" className="text-[#4E7A62] font-medium text-[12px] xl:text-[16px] hover:text-[#3BC950] transition-colors">Polityka prywatności</a>
-            <a href="#" className="text-[#4E7A62] font-medium text-[12px] xl:text-[16px] hover:text-[#3BC950] transition-colors">Regulamin</a>
-            <a href="#" className="text-[#4E7A62] font-medium text-[12px] xl:text-[16px] hover:text-[#3BC950] transition-colors">RODO</a>
+            <a href="#" className="text-[#76AC8B] font-medium text-[12px] xl:text-[16px] hover:text-[#72E59E] transition-colors">Polityka prywatności</a>
+            <a href="#" className="text-[#76AC8B] font-medium text-[12px] xl:text-[16px] hover:text-[#72E59E] transition-colors">Regulamin</a>
+            <a href="#" className="text-[#76AC8B] font-medium text-[12px] xl:text-[16px] hover:text-[#72E59E] transition-colors">RODO</a>
           </div>
         </div>
       </div>

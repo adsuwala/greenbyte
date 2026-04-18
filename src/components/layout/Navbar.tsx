@@ -83,7 +83,7 @@ function Navbar() {
               </div>
               <a
                 href="#contact"
-                className="inline-flex shrink-0 items-center whitespace-nowrap rounded-cta bg-[#3BC950] px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-hover 3xl:text-nav-desktop"
+                className="inline-flex shrink-0 items-center whitespace-nowrap rounded-cta bg-[#2B7D3A] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#236A30] 3xl:text-nav-desktop"
               >
                 Bezpłatna konsultacja
               </a>
@@ -149,7 +149,7 @@ function Navbar() {
             ))}
             <a
               href="#contact"
-              className="mt-2 inline-flex items-center justify-center whitespace-nowrap rounded-cta bg-[#3BC950] py-3 text-sm font-bold text-white transition hover:bg-brand-hover"
+              className="mt-2 inline-flex items-center justify-center whitespace-nowrap rounded-cta bg-[#2B7D3A] py-3 text-sm font-bold text-white transition hover:bg-[#236A30]"
               onClick={() => setIsOpen(false)}
             >
               Bezpłatna konsultacja

@@ -55,7 +55,7 @@ function FAQSection() {
             <div className="mt-7.5 xl:mt-3.75">
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-cta bg-[#3BC950] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-brand-hover md:text-xl xl:px-8 xl:py-5"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-cta bg-[#2B7D3A] px-6 py-3.5 text-sm font-bold text-white transition hover:bg-[#236A30] md:text-xl xl:px-8 xl:py-5"
               >
                 Zadaj własne pytanie
                 <svg
@@ -98,7 +98,7 @@ function FAQSection() {
                     onClick={() => toggleFAQ(index)}
                     className="w-full flex items-center justify-between py-5 xl:py-7 px-5 xl:px-8 text-left group focus:outline-none"
                   >
-                    <span className={`text-[14px] xl:text-[20px] font-medium font-sans transition-colors duration-300 ${isOpen ? 'text-[#00A63E]' : 'text-[#1D2A39] group-hover:text-[#00A63E]'}`}>
+                    <span className={`text-[14px] xl:text-[20px] font-medium font-sans transition-colors duration-300 ${isOpen ? 'text-[#2F7A3A]' : 'text-[#1D2A39] group-hover:text-[#2F7A3A]'}`}>
                       {item.question}
                     </span>
                     <div 
@@ -110,7 +110,7 @@ function FAQSection() {
                         </svg>
                       ) : (
                         <svg width="32" height="32" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 xl:w-7 xl:h-7">
-                          <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#B0B7C1" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
+                          <path d="M3.5 5.25L7 8.75L10.5 5.25" stroke="#6A7282" strokeWidth="1.16667" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       )}
                     </div>
@@ -120,7 +120,7 @@ function FAQSection() {
                     className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-125 opacity-100' : 'max-h-0 opacity-0'}`}
                   >
                     <div className="px-5 xl:px-8 pb-6 xl:pb-8">
-                      <p className="font-sans font-medium text-[#838A97] text-[14px] xl:text-[20px] leading-relaxed">
+                      <p className="font-sans font-medium text-[#5F6878] text-[14px] xl:text-[20px] leading-relaxed">
                         {item.answer}
                       </p>
                     </div>

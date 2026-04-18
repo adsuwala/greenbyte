@@ -116,7 +116,7 @@ function ContactSection() {
                   <div key={index} className="flex items-start gap-2.5">
                     <div className="w-10 h-10 shrink-0 bg-[#DCFCE7] rounded-[13px] flex items-center justify-center">{info.icon}</div>
                     <div className="flex flex-col">
-                      <span className="text-[#9AA1AF] text-[12px] xl:text-[16px] font-medium leading-none mb-1">{info.label}</span>
+                      <span className="text-[#657084] text-[12px] xl:text-[16px] font-medium leading-none mb-1">{info.label}</span>
                       {info.isLink ? (
                         <a href={info.href} className="text-[#1D2A39] text-[14px] xl:text-[20px] font-semibold hover:text-[#00A63E] transition-colors">{info.value}</a>
                       ) : (
@@ -136,7 +136,7 @@ function ContactSection() {
                   <ul className="flex flex-col gap-4">
                     {processSteps.map((step, index) => (
                       <li key={index} className="flex items-center gap-4">
-                        <div className="w-6 h-6 xl:w-8 xl:h-8 shrink-0 bg-[#3BC950] rounded-full flex items-center justify-center"><span className="text-white font-bold text-[12px] xl:text-[16px]">{index + 1}</span></div>
+                        <div className="w-6 h-6 xl:w-8 xl:h-8 shrink-0 bg-[#2B7D3A] rounded-full flex items-center justify-center"><span className="text-white font-bold text-[12px] xl:text-[16px]">{index + 1}</span></div>
                         <span className="text-[#C8EBD5] font-bold text-[14px] xl:text-[20px]">{step}</span>
                       </li>
                     ))}

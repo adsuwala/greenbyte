@@ -20,7 +20,7 @@ function CTASection() {
             <div className="shrink-0">
               <a
                 href="#contact"
-                className="group flex items-center justify-center gap-3 bg-[#3BC950] lg:bg-[#3BB155] hover:bg-[#329648] text-[#ffffff] px-6 py-4 xl:py-5 xl:px-8 lg:px-10 lg:py-5 rounded-cta xl:rounded-2xl font-bold text-[14px] md:text-[18px] xl:text-[24px] transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-black/20 overflow-hidden cursor-pointer w-full sm:w-auto"
+                className="group flex items-center justify-center gap-3 bg-[#2B7D3A] lg:bg-[#2B7D3A] hover:bg-[#236A30] text-[#ffffff] px-6 py-4 xl:py-5 xl:px-8 lg:px-10 lg:py-5 rounded-cta xl:rounded-2xl font-bold text-[14px] md:text-[18px] xl:text-[24px] transition-all duration-300 hover:scale-105 active:scale-95 shadow-xl shadow-black/20 overflow-hidden cursor-pointer w-full sm:w-auto"
               >
                 Umów konsultacje
                 <svg 
