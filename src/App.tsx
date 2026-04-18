@@ -63,76 +63,76 @@ function App() {
       <main>
         <HeroSection />
         {loadBelowFoldSections ? (
-          <Suspense fallback={<SectionPlaceholder className="min-h-[280px] md:min-h-[240px]" />}>
+          <Suspense fallback={<SectionPlaceholder className="min-h-70 md:min-h-60" />}>
             <TrustedBySection />
           </Suspense>
         ) : (
-          <SectionPlaceholder className="min-h-[280px] md:min-h-[240px]" />
+          <SectionPlaceholder className="min-h-70 md:min-h-60" />
         )}
 
         {loadBelowFoldSections ? (
           <Suspense
             fallback={
-              <SectionPlaceholder className="min-h-[1950px] md:min-h-[1350px] xl:min-h-[980px]" />
+              <SectionPlaceholder className="min-h-487.5 md:min-h-337.5 xl:min-h-245" />
             }
           >
             <ServicesSection />
           </Suspense>
         ) : (
-          <SectionPlaceholder className="min-h-[1950px] md:min-h-[1350px] xl:min-h-[980px]" />
+          <SectionPlaceholder className="min-h-487.5 md:min-h-337.5 xl:min-h-245" />
         )}
 
         {loadBelowFoldSections ? (
-          <Suspense fallback={<SectionPlaceholder className="min-h-[260px] xl:min-h-[220px]" />}>
+          <Suspense fallback={<SectionPlaceholder className="min-h-65 xl:min-h-55" />}>
             <CTASection />
           </Suspense>
         ) : (
-          <SectionPlaceholder className="min-h-[260px] xl:min-h-[220px]" />
+          <SectionPlaceholder className="min-h-65 xl:min-h-55" />
         )}
 
         {loadBelowFoldSections ? (
           <Suspense
             fallback={
-              <SectionPlaceholder className="min-h-[1150px] md:min-h-[980px] xl:min-h-[900px]" />
+              <SectionPlaceholder className="min-h-287.5 md:min-h-245 xl:min-h-225" />
             }
           >
             <PortfolioSection />
           </Suspense>
         ) : (
-          <SectionPlaceholder className="min-h-[1150px] md:min-h-[980px] xl:min-h-[900px]" />
+          <SectionPlaceholder className="min-h-287.5 md:min-h-245 xl:min-h-225" />
         )}
 
         {loadBelowFoldSections ? (
           <Suspense
             fallback={
-              <SectionPlaceholder className="min-h-[1000px] md:min-h-[920px] xl:min-h-[860px]" />
+              <SectionPlaceholder className="min-h-250 md:min-h-230 xl:min-h-215" />
             }
           >
             <FAQSection />
           </Suspense>
         ) : (
-          <SectionPlaceholder className="min-h-[1000px] md:min-h-[920px] xl:min-h-[860px]" />
+          <SectionPlaceholder className="min-h-250 md:min-h-230 xl:min-h-215" />
         )}
 
         {loadBelowFoldSections ? (
           <Suspense
             fallback={
-              <SectionPlaceholder className="min-h-[1300px] md:min-h-[1200px] xl:min-h-[1050px]" />
+              <SectionPlaceholder className="min-h-325 md:min-h-300 xl:min-h-262.5" />
             }
           >
             <ContactSection />
           </Suspense>
         ) : (
-          <SectionPlaceholder className="min-h-[1300px] md:min-h-[1200px] xl:min-h-[1050px]" />
+          <SectionPlaceholder className="min-h-325 md:min-h-300 xl:min-h-262.5" />
         )}
       </main>
 
       {loadBelowFoldSections ? (
-        <Suspense fallback={<SectionPlaceholder className="min-h-[420px]" />}>
+        <Suspense fallback={<SectionPlaceholder className="min-h-105" />}>
           <Footer />
         </Suspense>
       ) : (
-        <SectionPlaceholder className="min-h-[420px]" />
+        <SectionPlaceholder className="min-h-105" />
       )}
     </div>
   )
