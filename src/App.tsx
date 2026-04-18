@@ -10,8 +10,12 @@ const FAQSection = lazy(() => import('./components/sections/FAQSection'))
 const ContactSection = lazy(() => import('./components/sections/ContactSection'))
 const Footer = lazy(() => import('./components/sections/Footer'))
 
+function SectionPlaceholder({ className }: { className: string }) {
+  return <div aria-hidden="true" className={className} />
+}
+
 function App() {
-  const [renderDeferredSections, setRenderDeferredSections] = useState(false)
+  const [loadBelowFoldSections, setLoadBelowFoldSections] = useState(false)
 
   useEffect(() => {
     const win = window as Window & {
@@ -25,21 +29,21 @@ function App() {
     let idleId: number | undefined
     let timeoutId: number | undefined
 
-    const scheduleDeferredRender = () => {
+    const scheduleLoad = () => {
       if (win.requestIdleCallback) {
-        idleId = win.requestIdleCallback(() => setRenderDeferredSections(true), {
-          timeout: 1200,
+        idleId = win.requestIdleCallback(() => setLoadBelowFoldSections(true), {
+          timeout: 1500,
         })
         return
       }
 
-      timeoutId = window.setTimeout(() => setRenderDeferredSections(true), 300)
+      timeoutId = window.setTimeout(() => setLoadBelowFoldSections(true), 450)
     }
 
     if (document.readyState === 'complete') {
-      scheduleDeferredRender()
+      scheduleLoad()
     } else {
-      window.addEventListener('load', scheduleDeferredRender, { once: true })
+      window.addEventListener('load', scheduleLoad, { once: true })
     }
 
     return () => {
@@ -58,22 +62,77 @@ function App() {
 
       <main>
         <HeroSection />
-        {renderDeferredSections && (
-          <Suspense fallback={null}>
+        {loadBelowFoldSections ? (
+          <Suspense fallback={<SectionPlaceholder className="min-h-[280px] md:min-h-[240px]" />}>
             <TrustedBySection />
+          </Suspense>
+        ) : (
+          <SectionPlaceholder className="min-h-[280px] md:min-h-[240px]" />
+        )}
+
+        {loadBelowFoldSections ? (
+          <Suspense
+            fallback={
+              <SectionPlaceholder className="min-h-[1950px] md:min-h-[1350px] xl:min-h-[980px]" />
+            }
+          >
             <ServicesSection />
+          </Suspense>
+        ) : (
+          <SectionPlaceholder className="min-h-[1950px] md:min-h-[1350px] xl:min-h-[980px]" />
+        )}
+
+        {loadBelowFoldSections ? (
+          <Suspense fallback={<SectionPlaceholder className="min-h-[260px] xl:min-h-[220px]" />}>
             <CTASection />
+          </Suspense>
+        ) : (
+          <SectionPlaceholder className="min-h-[260px] xl:min-h-[220px]" />
+        )}
+
+        {loadBelowFoldSections ? (
+          <Suspense
+            fallback={
+              <SectionPlaceholder className="min-h-[1150px] md:min-h-[980px] xl:min-h-[900px]" />
+            }
+          >
             <PortfolioSection />
+          </Suspense>
+        ) : (
+          <SectionPlaceholder className="min-h-[1150px] md:min-h-[980px] xl:min-h-[900px]" />
+        )}
+
+        {loadBelowFoldSections ? (
+          <Suspense
+            fallback={
+              <SectionPlaceholder className="min-h-[1000px] md:min-h-[920px] xl:min-h-[860px]" />
+            }
+          >
             <FAQSection />
+          </Suspense>
+        ) : (
+          <SectionPlaceholder className="min-h-[1000px] md:min-h-[920px] xl:min-h-[860px]" />
+        )}
+
+        {loadBelowFoldSections ? (
+          <Suspense
+            fallback={
+              <SectionPlaceholder className="min-h-[1300px] md:min-h-[1200px] xl:min-h-[1050px]" />
+            }
+          >
             <ContactSection />
           </Suspense>
+        ) : (
+          <SectionPlaceholder className="min-h-[1300px] md:min-h-[1200px] xl:min-h-[1050px]" />
         )}
       </main>
 
-      {renderDeferredSections && (
-        <Suspense fallback={null}>
+      {loadBelowFoldSections ? (
+        <Suspense fallback={<SectionPlaceholder className="min-h-[420px]" />}>
           <Footer />
         </Suspense>
+      ) : (
+        <SectionPlaceholder className="min-h-[420px]" />
       )}
     </div>
   )
